@@ -24,9 +24,7 @@ namespace DisplayDemonCount
 
             public static void Register()
             {
-                var category = MelonPreferences.GetCategory("NeonLite/UI");
-                if (category == null)
-                    return;
+                var category = MelonPreferences.CreateCategory("DisplayDemonCount");
 
                 AlwaysDisplayDemonCount = category.CreateEntry("Always Display Demon Count", true,
                     description: "Displays the demon count on every level, including Chapter 11 and sidequest levels.");
